@@ -1,0 +1,209 @@
+:root{
+    --link_color: #B7B7B7;
+    --link_active_color: #9BFF9F;
+    --h1_text_color_version: #87898A;
+    --burger_icon_color: #565656;
+}
+/*animations*/
+@keyframes moving-glow {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 50px);
+    }
+    100% {
+        left: 0;
+    }
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 61px 0 61px 0;
+    position: relative;
+}
+header h1{
+    color: var(--h1_text_color_main);
+    align-items: center;
+    /*font-size: 32px to 24px;*/
+    font-size: clamp(1.5rem, 1.3396rem + 0.7547vw, 2rem);
+    font-weight: 600;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+header h1 span{
+    font-weight: 500;
+    color: var(--h1_text_color_version);
+    /*font-size: 32px to 18px;*/
+    font-size: clamp(1.125rem, 0.8443rem + 1.3208vw, 2rem);
+}
+header .icon_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    height: 60px;
+}
+
+header .icon_container img:first-child{
+    margin-left: -13%;
+    margin-right: -10%;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+header ul li a{
+    color: var(--link_color);
+    font-size: 18px;
+    font-weight: 500;
+}
+header ul li a.active{
+    color: var(--link_active_color);
+    text-shadow: 0 0 8px rgba(165, 255, 132, 0.36);
+}
+header ul li img{
+    display: block;
+}
+header ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mobile_menu{
+    display: none;
+}
+#mobile_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: rgba(13, 16, 18, 0.94);
+    display: none;
+    align-items: flex-end;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mobile_version{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    width: 80%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 14%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1380px) {
+#pc_version{
+    display: none;
+}
+
+    header{
+        width: 85%;
+    }
+    .menu_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        width: 42px;
+        height: 42px;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    .menu_icon:hover {
+    }
+
+    .menu_icon span,
+    .menu_icon::before,
+    .menu_icon::after {
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: var(--burger_icon_color);
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .menu_icon::before,
+    .menu_icon::after {
+        content: "";
+    }
+
+    .menu_icon::before {
+        top: 11px;
+    }
+
+    .menu_icon::after {
+        bottom: 11px;
+    }
+
+    .menu_icon span {
+        top:75%;
+    }
+
+    /* Анимация активного состояния */
+    .menu_icon._active span {
+        transform: scale(0);
+        left: 50%;
+    }
+
+    .menu_icon._active::before {
+        top: 50%;
+        left: 5%;
+        transform: rotate(-45deg) translateY(-50%);
+    }
+
+    .menu_icon._active::after {
+        bottom: 50%;
+        left: 5%;
+        transform: rotate(45deg) translateY(50%);
+    }
+    #mobile_menu.isOpen {
+        opacity: 1;
+        display: flex;
+    }
+    #mobile_menu.isOpen::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 4px;
+        background: linear-gradient(90deg, #00ff99, rgba(0, 255, 153, 0.2));
+        box-shadow: 0 0 10px rgba(0, 255, 153, 0.8);
+        animation: moving-glow 4s infinite linear;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    header .icon_container{
+        display: none;
+    }
+    header{
+        padding: 41px 0 41px 0;
+    }
+    header h1{
+        gap: 10px
+    }
+
+}

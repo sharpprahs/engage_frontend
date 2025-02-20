@@ -1,0 +1,95 @@
+:root{
+    --select_text_color: #ffffff;
+    --select_background_color: #140D1C;
+}
+
+.mailings_settings{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 1185px;
+    align-items: center;
+    margin: 55px auto;
+}
+.mailings_settings_card{
+ display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.09);
+    padding: 43px 60px 43px 60px;
+}
+.mailings_settings_card h3{
+    font-size: 38px;
+    font-weight: 500;
+}
+.mailings_settings_card p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.mailings_settings_label {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.mailings_settings_label .select_wrapper{
+    position: relative;
+    width: 247px;
+}
+.mailings_settings_label .select_wrapper select {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: var(--select_background_color);
+    border-radius: 30px;
+    padding: 17px 0 17px 25px;
+    border: none;
+    outline: none;
+    color: var(--select_text_color);
+    font-size: 16px;
+    font-weight: 500;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: start;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* кастомная стрелка */
+.mailings_settings_label .select_wrapper::after {
+    content: "";
+    color: #a87cc3;
+    position: absolute;
+    background-image: url('/static/select_arrow.svg');
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 9px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+    pointer-events: none;
+}
+
+/* Hover эффект */
+.mailings_settings_label .select_wrapper select:hover {
+    background: linear-gradient(145deg, #1a091e, #220b2b);
+}
+
+/* Focus (при выборе) */
+.mailings_settings_label .select_wrapper select:focus {
+    box-shadow: 0 0 10px rgba(207, 161, 255, 0.5);
+}
+.mailings_settings_label .select_wrapper:has(select:focus)::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Стиль выпадающего списка */
+.mailings_settings_label .select_wrapper select option {
+    background: #120515;
+    color: #e1c5ff;
+    font-size: 16px;
+    padding: 10px;
+}

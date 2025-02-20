@@ -1,0 +1,143 @@
+:root{
+    --h1_text_color_main: #ffffff;
+    --h1_text_color_version: #87898A;
+    --p_text_color: #D1D1D2;
+    --main_background_color: #9BFF9F;
+}
+/*all animations*/
+@keyframes slow-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg); /* Наклон вправо */
+    }
+    50% {
+        transform: rotate(-30deg); /* Наклон влево */
+    }
+    75% {
+        transform: rotate(30deg); /* Наклон вправо */
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.general_container{
+    width: 497px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+.general_container h1{
+    margin-left: 29px;
+    color: var(--h1_text_color_main);
+    /*font-size: 48px to 38px;*/
+    font-size: clamp(2.375rem, 2.1563rem + 1vw, 3rem);
+    width: 347px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.general_container h1 span{
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--h1_text_color_version);
+}
+.general_container .icon_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    height: 60px;
+}
+
+.general_container .icon_container img:first-child{
+    margin-left: -5%;
+    margin-right: -10%;
+    animation: slow-rotate 8s infinite ease-in-out;
+}
+.general_container p{
+    margin-left: 29px;
+    margin-top: 52px;
+    /*font-size: 22px to 18px;*/
+    font-size: clamp(1.125rem, 1.0375rem + 0.4vw, 1.375rem);
+    font-weight: 500;
+    color: var(--p_text_color);
+}
+.general_container form{
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.general_container form input{
+    width: 100%;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #1E2226;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+.general_container form input:hover {
+    background: #222629;
+}
+
+.general_container form input:focus {
+    background: #2A2E31;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.general_container form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+.buttons{
+    margin-left: 29px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*font-size: 18px;*/
+    font-size: clamp(1rem, 0.9563rem + 0.2vw, 1.125rem);
+    font-weight: 500;
+    align-items: center;
+    gap: 30px;
+}
+.login_btn{
+    background-color: var(--main_background_color);
+    border-radius: 55px;
+    padding: 12px 36px 12px 36px;
+    font-weight: 600;
+    color: #000000;
+}
+@media screen and (max-width: 760px) {
+    .general_container{
+        width: 80%;
+    }
+    .general_container form input{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 430px) {
+  .general_container h1, .general_container p, .buttons{
+      margin-left: unset;
+  }
+    .buttons{
+        justify-content: center;
+    }
+    .general_container h1{
+        width: 100%;
+    }
+    .general_container p{
+        margin-top: 20px;
+    }
+ .login_btn{
+     padding: 12px 32px 12px 32px;
+ }
+    .general_container form input{
+        padding: 25px;
+    }
+}
