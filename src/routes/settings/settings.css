@@ -135,6 +135,7 @@ background: var(--background_card);
         gap: 20px;
     }
     .settings_panel_element input{
-        padding: 10px 0 10px 15px;
+        padding: 10px 15px 10px 15px;
+        text-align: center;
     }
 }

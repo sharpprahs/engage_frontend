@@ -26,6 +26,8 @@ ol, ul {
 }
 button{
     padding: 0;
+    outline: none; /* Убираем обводку при фокусе */
+    -webkit-tap-highlight-color: transparent;
 }
 /* Remove default blockquote and quote styling */
 blockquote, q {
