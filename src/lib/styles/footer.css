@@ -1,7 +1,7 @@
 :root{
     --footer_background: #0D1012;
-    --footer_text: #4A4C4D;
-    --footer_title: #989898;
+    --footer_text: #ffffff;
+    --footer_title: #889fff;
 }
 
 footer{
@@ -47,9 +47,12 @@ footer{
 }
 @media screen and (max-width: 1250px) {
  .footer_container{
-     width: 90%;
+     width: 80%;
      gap: 5px;
  }
+    .footer_container img{
+        display: none;
+    }
 }
 @media screen and (max-width: 680px) {
 footer{

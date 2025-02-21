@@ -2,11 +2,11 @@
     --card_sender_background_color: linear-gradient(to bottom left, #663db3 0%, #6011af 100%);
     --card_sender_h2_color: #ffffff;
     --card_sender_p_color: #F7C7FF;
-    --card_sender_label_color: #B7B7B7;
+    --card_sender_label_color: #ffffff;
     --card_recipient_background_color: linear-gradient(to bottom left, #4c9434 0%, #5a8e45 100%);
     --card_recipient_h2_color: #ffffff;
     --card_recipient_p_color: #C7FFD1;
-    --card_recipient_label_color: rgb(255, 255, 255);
+    --card_recipient_label_color: #ffffff;
     --h1_color: #9BD9FF;
     --text_status: #ffffff;
     --text_status_now_color: #afff95;
@@ -61,8 +61,8 @@
 }
 
 .sender_card_colors .mailings_settings_label label{
-    color: var(--card_recipient_label_color);
-    font-weight: 600;
+    color: var(--card_sender_label_color);
+    font-weight: 500;
 }
 
 /*recipient colors*/
@@ -78,7 +78,7 @@
 
 .recipient_card_colors .mailings_settings_label label{
     color: var(--card_recipient_label_color);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .mailings_status{
@@ -102,6 +102,8 @@
     color: var(--text_status);
     font-size: 16px;
     font-weight: 400;
+    transition: opacity 0.2s ease-in-out;
+
 }
 .mailing_status_now button{
     /*font-size: 18px to 16px;*/
@@ -218,10 +220,6 @@ color: var(--engage_color);
         padding: 35px 25px 33px 35px;
         gap: 0;
         width: 85%;
-    }
-    .sender_card_colors .mailings_settings_label label, .recipient_card_colors .mailings_settings_label label{
-        font-weight: 500;
-        font-size: 14px;
     }
     #engage_mms{
         margin-top: 10px;

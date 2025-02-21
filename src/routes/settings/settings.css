@@ -103,6 +103,12 @@ background: var(--background_card);
     font-size: clamp(0.875rem, 0.7948rem + 0.3774vw, 1.125rem);
     font-weight: 400;
 }
+#settings_range_row_items{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
 @media screen and (max-width: 1380px) {
     #section_setting{
       width: 90%;
@@ -126,6 +132,17 @@ background: var(--background_card);
     .settings_panel_element span{
         display: none;
     }
+    .settings_panel_element{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .settings_panel_element:nth-last-of-type(1).settings_panel_element input:last-child{
+        border-radius: 10px 25px 25px 10px;
+    }
+    .settings_panel_element:nth-last-of-type(1).settings_panel_element input:nth-of-type(1){
+        border-radius: 25px 10px 10px 25px;
+        margin-right: -5px;
+    }
     #section_setting{
         width: 100%;
     }
@@ -135,7 +152,7 @@ background: var(--background_card);
         gap: 20px;
     }
     .settings_panel_element input{
-        padding: 10px 15px 10px 15px;
+        padding: 10px;
         text-align: center;
     }
 }

@@ -136,6 +136,14 @@
     .general_container p{
         margin-top: 20px;
     }
+    .general_container .icon_container img{
+        width: 24px;
+        height: auto;
+    }
+    .general_container .icon_container img:first-child{
+        width: 65px;
+        height: auto;
+    }
  .login_btn{
      padding: 12px 32px 12px 32px;
  }

@@ -33,9 +33,11 @@
             </div>
             <div class="settings_panel_element">
                 <label for="send_time_interval">send_time_interval</label>
+              <div id="settings_range_row_items">
                 <input type="number" id="send_time_interval" placeholder="10" value="10">
                 <span>———</span>
                 <input type="number" id="send_time_interval" placeholder="10" value="10">
+              </div>
             </div>
           <button type="submit" class="saved_btn">сохранить</button>
         </div>
