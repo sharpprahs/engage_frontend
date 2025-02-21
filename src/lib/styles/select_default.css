@@ -115,6 +115,8 @@
 
     .select_wrapper_default .select_wrapper{
         width: 90%;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
 }
