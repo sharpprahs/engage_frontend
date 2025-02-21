@@ -5,7 +5,7 @@
     --line_element_color: #2C2E30;
     --text_color: #ffffff;
     --text_color_h3: #a99bff;
-    --p_description_color: #ffffff;
+    --p_description_color: rgba(255, 255, 255, 0.53);
     --settings_background_color: #6c1ad5;
     --general_title_color: #ffffff;
 }
@@ -101,7 +101,7 @@ background: var(--background_card);
     color: var(--p_description_color);
     /*font-size: 18px to 14px;*/
     font-size: clamp(0.875rem, 0.7948rem + 0.3774vw, 1.125rem);
-    font-weight: 500;
+    font-weight: 400;
 }
 @media screen and (max-width: 1380px) {
     #section_setting{

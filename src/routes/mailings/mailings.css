@@ -139,7 +139,7 @@ color: var(--engage_color);
 .mailings_server_logs h3{
     color: var(--logs_text_color);
     /*font-size: 22px to 18px;*/
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 500;
 }
 .mailings_server_logs ul{
@@ -153,8 +153,8 @@ color: var(--engage_color);
     color: var(--logs_element_color);
 }
 .mailings_server_logs ul li{
-    /*18 to 14px*/
-    font-size: clamp(0.875rem, 0.7948rem + 0.3774vw, 1.125rem);
+    /*18 to 16px*/
+    font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
 }
 .mailings_server_logs ul::-webkit-scrollbar {
     width: 29px; /* Ширина скролла */
