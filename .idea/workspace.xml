@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Footer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Footer.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/styles/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/mailings/mailings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/mailings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/settings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/settings.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,7 @@
         <option value="+page" />
         <option value="SelectCard" />
         <option value="SelectDropdown" />
+        <option value="NotFound" />
       </list>
     </option>
   </component>
@@ -50,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/overflow/Desktop/test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.preview.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\overflow\\Desktop\\frontend_engage_mailer\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/overflow/Desktop/frontend_engage_mailer/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.preview.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\overflow\\Desktop\\frontend_engage_mailer\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\overflow\Desktop\frontend_engage_mailer\static" />
@@ -151,7 +149,7 @@
       <workItem from="1740144135916" duration="276000" />
       <workItem from="1740146746164" duration="3299000" />
       <workItem from="1740151867459" duration="879000" />
-      <workItem from="1740155671722" duration="2810000" />
+      <workItem from="1740155671722" duration="11292000" />
     </task>
     <servers />
   </component>

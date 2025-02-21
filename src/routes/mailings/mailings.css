@@ -13,7 +13,7 @@
     --engage_color: #69C6FF;
     --mss_color: #00B35A;
     --logs_background: #14171A;
-    --logs_text_color: #8FBFFF;
+    --logs_text_color: #ffffff;
     --logs_element_color: #99C1F6;
 }
 
@@ -147,14 +147,19 @@ color: var(--engage_color);
 .mailings_server_logs ul{
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 40px;
+    gap: 25px;
+    margin-top: 30px;
     max-height: 247px;
     overflow-y: auto;
     font-weight: 400;
     color: var(--logs_element_color);
 }
 .mailings_server_logs ul li{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    /*align-items: center;*/
+    gap: 15px;
     /*18 to 16px*/
     font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
 }
@@ -164,6 +169,7 @@ color: var(--engage_color);
 
 .mailings_server_logs ul::-webkit-scrollbar-thumb {
     background: #5fa0f6; /* Цвет ползунка */
+    /*background: #855ff6; !* Цвет ползунка *!*/
     border-radius: 25px; /* Закругление */
 }
 
@@ -186,6 +192,49 @@ color: var(--engage_color);
 }
 .cursor:not(.visible) {
     opacity: 0;
+}
+.logs_row{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+.toggle_scroll{
+  color: #ffffff;
+    display: flex;
+    position: relative;
+    transition: 1s ease-in-out;
+    padding-left: 35px;
+}
+.toggle_scroll:before{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    background-image: url('/auto_scroll.svg');
+    background-size: contain;
+}
+#log_time{
+    color: #ffffff6e;
+    font-size: 12px;
+}
+.log_data{
+    font-size: 14px;
+    color: #808080;
+}
+.log_title{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: fit-content;
+    gap: 2px;
+    white-space: nowrap;
+}
+.log_action{
+    font-size: 14px;
+    color: #95aaff;
 }
 
 @media screen and (max-width: 1380px) {
@@ -219,7 +268,7 @@ color: var(--engage_color);
     .mailings_settings_card{
         padding: 35px 25px 33px 35px;
         gap: 0;
-        width: 85%;
+        width: 80%;
     }
     #engage_mms{
         margin-top: 10px;
@@ -234,12 +283,23 @@ color: var(--engage_color);
     }
     .mailings_server_logs ul{
         margin-top: 25px;
-        overflow-y: unset;
-        overflow-x: auto;
-        flex-direction: row;
+        overflow-y: auto;
+        overflow-x: unset;
+        width: 110%;
+        margin-left: -5%;
+        padding-right: 5px;
+        flex-direction: column;
         gap: 25px;
         padding-bottom: 20px;
-        white-space: nowrap;
     }
+    .logs_row{
+        flex-direction: column;
+        width: fit-content;
+        align-items: flex-start;
+    }
+    .mailings_server_logs ul::-webkit-scrollbar {
+        width: 5px; /* Ширина скролла */
+    }
+
 }
 

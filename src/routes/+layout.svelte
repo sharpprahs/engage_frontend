@@ -4,14 +4,19 @@
 	import "$lib/styles/reset.css"
 	import "$lib/styles/default.css"
 	import Footer from '$lib/components/Footer.svelte';
+	import NotFound from '$lib/components/NotFound.svelte';
 </script>
 
-{#if page.url.pathname!== '/'}
+{#if page.status !== 404 && page.url.pathname !== '/'}
 	<Header />
 {/if}
 
-<slot />
+{#if page.status === 404}
+	<NotFound />
+{:else}
+	<slot />
+{/if}
 
-{#if page.url.pathname !== '/'}
+{#if page.status !== 404 && page.url.pathname !== '/'}
 	<Footer />
 {/if}

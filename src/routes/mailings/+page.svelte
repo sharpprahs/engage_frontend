@@ -4,8 +4,9 @@
 	import "$lib/styles/button_default.css"
 	import SelectCard from '$lib/components/SelectCard.svelte';
 	import type { PageProps } from './$types';
-	import { writable } from "svelte/store";
+	import { writable, get } from "svelte/store";
 	import { useTypingEffect } from "$lib/utils/typingEffect";
+	import { onDestroy, onMount } from 'svelte';
 
 
 	let title = "EngageMailer - рассылка сообщений";
@@ -35,6 +36,53 @@
 		deletingSpeed: 80,
 		pauseBetweenCycles: 5000
 	});
+
+	let autoScroll = writable(true);
+	let logsContainer: HTMLUListElement;
+
+	// 🚀 Функция автоскролла (работает постоянно)
+	function scrollToBottom() {
+		if (logsContainer && get(autoScroll)) {
+			logsContainer.scrollTop = logsContainer.scrollHeight;
+		}
+	}
+
+	// 🚀 Отслеживание изменений в списке логов
+	let observer: MutationObserver;
+	onMount(() => {
+		if (logsContainer) {
+			console.log("logsContainer найден:", logsContainer);
+
+			observer = new MutationObserver(() => {
+				scrollToBottom(); // Постоянный автоскролл
+			});
+
+			observer.observe(logsContainer, { childList: true, subtree: true });
+
+			// Чтобы сразу проскроллить при загрузке
+			scrollToBottom();
+		}
+	});
+
+	// 🚀 Очистка при размонтировании
+	onDestroy(() => {
+		if (observer) observer.disconnect();
+	});
+
+	// 🚀 Функция переключения автоскролла
+	function toggleAutoScroll() {
+		autoScroll.update(enabled => {
+			const newState = !enabled;
+			console.log("Автоскролл:", newState ? "включен" : "выключен");
+
+			// Если включаем автоскролл, сразу скроллим
+			if (newState) {
+				scrollToBottom();
+			}
+
+			return newState;
+		});
+	}
 </script>
 
 <svelte:head>
@@ -87,16 +135,79 @@
 
 <!-- Server Logs -->
 <section class="mailings_server_logs">
-	<h3>Логи сервера</h3>
-	<ul>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
-		<li>Server logs</li>
+	<div class="logs_row"><h3>Логи сервера</h3> 	<button onclick={() => toggleAutoScroll()} class="toggle_scroll">
+		{$autoScroll ? "Остановить автоскролл" : "Включить автоскролл"}
+	</button></div>
+	<ul bind:this={logsContainer}>
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
+		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<span class="log_data">Получатель: asdsad@list.ru</span>
+			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
+			<span class="log_data">Proxy: 192.168.0.1:2000</span>
+			<span class="log_data">Тема: Про что-то</span>
+			<span class="log_data">Сообщение: текст сообщения</span>
+			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
+			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
+
 	</ul>
 </section>
