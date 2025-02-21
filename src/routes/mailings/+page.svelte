@@ -100,7 +100,7 @@
 	<!-- ✅ Селект отправителей -->
 	<SelectCard
 		title="Отправители"
-		label="Аккаунты с которых рассылаем"
+		label="База аккаунтов"
 		options={data.senderAccounts}
 		selectedValue={$selectedSenderValue}
 		onChange={handleSenderChange}
@@ -111,7 +111,7 @@
 	<!-- ✅ Селект получателей -->
 	<SelectCard
 		title="Получатели"
-		label="База аккаунтов"
+		label="База лидов"
 		options={data.recipientAccounts}
 		selectedValue={$selectedRecipientValue}
 		onChange={handleRecipientChange}

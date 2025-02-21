@@ -268,7 +268,7 @@ color: var(--engage_color);
     .mailings_settings_card{
         padding: 35px 25px 33px 35px;
         gap: 0;
-        width: 80%;
+        width: 85%;
     }
     #engage_mms{
         margin-top: 10px;
@@ -278,7 +278,7 @@ color: var(--engage_color);
     }
 
     .mailings_server_logs{
-        width: 70%;
+        width: 73%;
         padding: 35px 37px 35px 37px;
     }
     .mailings_server_logs ul{

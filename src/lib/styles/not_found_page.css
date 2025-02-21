@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: auto;
     align-items: center;
+    gap: 15px;
     text-align: center;
     padding: 50px;
 }
@@ -11,17 +12,17 @@
     height: auto;
 }
 .error-page h1 {
-    font-size: 3rem;
+    font-size: clamp(2.375rem, 2.1745rem + 0.9434vw, 3rem);
     color: #ffffff;
 }
 .error-page p {
     font-size: 1.2rem;
 }
 .error-page a {
-    display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    color: #9BFF9F;
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: #443cb7;
+    border-radius: 55px;
+    padding: 12px 36px 12px 36px;
+    font-weight: 600;
+    color: #ffffff;
 }
