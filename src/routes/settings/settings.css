@@ -1,11 +1,13 @@
 :root{
-    --background_card: #0E1012;
-    --h2_description_color: #B7B7B7;
-    --background_inputs: #161719;
+    --background_card: linear-gradient(to bottom left, #663db3 0%, #3a2970 100%);
+    --h2_description_color: #c8c0ff;
+    --background_inputs: rgba(25, 0, 24, 0.46);
     --line_element_color: #2C2E30;
     --text_color: #ffffff;
-    --p_description_color: #777777;
-    --main_background_color: #9BFF9F;
+    --text_color_h3: #a99bff;
+    --p_description_color: #ffffff;
+    --settings_background_color: #6c1ad5;
+    --general_title_color: #ffffff;
 }
 #section_setting{
     width: 1150px;
@@ -15,21 +17,22 @@
 }
 .settings_card{
     width: 927px;
-background-color: var(--background_card);
+background: var(--background_card);
     display: flex;
     flex-direction: column;
     gap: 7px;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 43px 63px 43px 63px;
 }
 .settings_card h2{
     /*font-size: 38px to 28px;*/
     font-size: clamp(1.75rem, 1.5495rem + 0.9434vw, 2.375rem);
     font-weight: 500;
-    color: var(--main_background_color);
+    color: var(--general_title_color);
 }
 .settings_card p{
     color: var(--h2_description_color);
+    font-weight: 500;
     /*font-size: 16px to 14px;*/
     font-size: clamp(0.875rem, 0.8349rem + 0.1887vw, 1rem);
 }
@@ -64,14 +67,14 @@ background-color: var(--background_card);
     font-weight: 700;
 }
 .saved_btn{
-    background-color: var(--main_background_color);
+    background-color: var(--settings_background_color);
     border-radius: 55px;
     padding: 10px 36px 10px 36px;
     font-weight: 600;
     /*font-size: 18px to 16px;*/
     font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
     height: fit-content;
-    color: #000000;
+    color: #ffffff;
 }
 .description_container{
     display: flex;
@@ -92,7 +95,7 @@ background-color: var(--background_card);
     /*font-size: 28px to 26px;*/
     font-size: clamp(1.625rem, 1.5849rem + 0.1887vw, 1.75rem);
     font-weight: 500;
-    color: var(--text_color);
+    color: var(--text_color_h3);
 }
 .description_content p{
     color: var(--p_description_color);

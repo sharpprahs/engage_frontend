@@ -2,7 +2,7 @@
     --link_color: #B7B7B7;
     --link_active_color: #9BFF9F;
     --h1_text_color_version: #87898A;
-    --burger_icon_color: #565656;
+    --burger_icon_color: #848fbb;
 }
 /*animations*/
 @keyframes moving-glow {
@@ -181,6 +181,7 @@ header ul li {
     #mobile_menu.isOpen {
         opacity: 1;
         display: flex;
+        z-index: 2;
     }
     #mobile_menu.isOpen::after {
         content: "";

@@ -1,0 +1,16 @@
+:root{
+    --main_background_color: #9BFF9F;
+}
+.btn_default{
+    background-color: var(--main_background_color);
+    border-radius: 55px;
+    padding: 10px 36px 10px 36px;
+    font-weight: 600;
+    color: #000000;
+}
+
+@media screen and (max-width: 430px) {
+    .btn_default{
+        padding: 12px 32px 12px 32px;
+    }
+}

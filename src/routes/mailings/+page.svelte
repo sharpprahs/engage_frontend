@@ -1,64 +1,102 @@
-<script>
+<script lang="ts">
 	import "./mailings.css";
+	import "$lib/styles/select_default.css"
+	import "$lib/styles/button_default.css"
 	import SelectCard from '$lib/components/SelectCard.svelte';
+	import type { PageProps } from './$types';
+	import { writable } from "svelte/store";
+	import { useTypingEffect } from "$lib/utils/typingEffect";
 
-	// Список доступных аккаунтов
-	let senderAccounts = ['mail_ru_msk_zone_1', 'gmail_zone_2', 'yandex_zone_3'];
 
-	// Выбранное значение (по умолчанию)
-	let selectedSender = senderAccounts[0];
+	let title = "EngageMailer - рассылка сообщений";
+	let description = "EngageMailer - инструмент для автоматизированной email-рассылки, CRM и эффективной работы с клиентами.";
 
-	// Функция обработки изменения выбора
-	function handleSenderChange(value) {
-		selectedSender = value;
-		console.log('Выбранный отправитель:', value);
-		// Тут можно делать запрос в БД или обновлять состояние
+	let { data }: PageProps = $props();
+
+	// ✅ Разделяем состояние для каждого селекта
+	const selectedSenderValue = writable(data.senderAccounts[0]?.value || "");
+	const selectedRecipientValue = writable(data.recipientAccounts[0]?.value || "");
+
+	// ✅ Обновляем только `selectedSenderValue`
+	function handleSenderChange(value: string) {
+		console.log("Выбранный отправитель:", value);
+		selectedSenderValue.set(value);
 	}
+
+	// ✅ Обновляем только `selectedRecipientValue`
+	function handleRecipientChange(value: string) {
+		console.log("Выбранный получатель:", value);
+		selectedRecipientValue.set(value);
+	}
+	// Используем утилиту с нужным текстом
+	const { statusText, showCursor } = useTypingEffect({
+		text: "жду начала рассылки",
+		typingSpeed: 90,
+		deletingSpeed: 80,
+		pauseBetweenCycles: 5000
+	});
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta name="keywords" content="email, рассылка, автоматизация, CRM, EngageMailer" />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:url" content="https://yourwebsite.com/" />
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
 <section class="mailings_settings">
-	<!-- Sender -->
+	<!-- ✅ Селект отправителей -->
+	<SelectCard
+		title="Отправители"
+		label="Аккаунты с которых рассылаем"
+		options={data.senderAccounts}
+		selectedValue={$selectedSenderValue}
+		onChange={handleSenderChange}
+		className="mailings_settings_card sender_card_colors"
+		specialClassName="mailings_settings_label select_wrapper_default sender_select_colors"
+	/>
 
-		<SelectCard
-			title="Отправители"
-			description="Пул отправителей, с которых будет производиться отправка"
-			label="Аккаунты"
-			options={senderAccounts}
-			selectedValue={selectedSender}
-			onChange={handleSenderChange}
-			className="mailings_settings_card"
-			specialClassName="mailings_settings_label"
-		/>
-
-
-<!--	&lt;!&ndash; Recipient &ndash;&gt;-->
-<!--	<div class="mailings_settings_card mailings_recipient">-->
-<!--		<h3>Recipient</h3>-->
-<!--		<p>The account of the user who will receive the message</p>-->
-<!--		<label for="mailings_recipient_select">Base</label>-->
-<!--		<select id="mailings_recipient_select" bind:value={selectedRecipient}>-->
-<!--			<option value="web_arhitech">Web arhitech</option>-->
-<!--			<option value="other_user">Other user</option>-->
-<!--		</select>-->
-<!--	</div>-->
+	<!-- ✅ Селект получателей -->
+	<SelectCard
+		title="Получатели"
+		label="База аккаунтов"
+		options={data.recipientAccounts}
+		selectedValue={$selectedRecipientValue}
+		onChange={handleRecipientChange}
+	className="mailings_settings_card recipient_card_colors"
+	specialClassName="mailings_settings_label select_wrapper_default recipient_select_colors"
+	/>
 </section>
 
-<!--&lt;!&ndash; Status Section &ndash;&gt;-->
-<!--<section class="mailings_status">-->
-<!--	<h3>Status</h3>-->
-<!--	<p>Shipping status</p>-->
-<!--	<button class="start_btn">Start</button>-->
-<!--	<p>-->
-<!--		<a href="/mms" class="status_link">EngageMMS:</a> waiting for a text to be sent-->
-<!--	</p>-->
-<!--</section>-->
+<!-- Status Section -->
+<section class="mailings_status">
+	<h1>Статус</h1>
+	<div class="mailing_status_now">
+		<p>рассылки нет</p>
+		<button class="btn_default">начать</button>
+	</div>
+	<div id="engage_mms">
+		<span class="engage">Engage</span><span class="mms">MMS:</span>
+		<p>{$statusText}<span class="cursor" class:visible={$showCursor}>|</span></p>
+	</div>
+</section>
 
-<!--&lt;!&ndash; Server Logs &ndash;&gt;-->
-<!--<section class="mailings_server_logs">-->
-<!--	<h3>Server logs</h3>-->
-<!--	<ul>-->
-<!--		<li>Server logs</li>-->
-<!--		<li>Server logs</li>-->
-<!--		<li>Server logs</li>-->
-<!--		<li>Server logs</li>-->
-<!--	</ul>-->
-<!--</section>-->
+<!-- Server Logs -->
+<section class="mailings_server_logs">
+	<h3>Логи сервера</h3>
+	<ul>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+		<li>Server logs</li>
+	</ul>
+</section>

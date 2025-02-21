@@ -1,6 +1,20 @@
 :root{
-    --select_text_color: #ffffff;
-    --select_background_color: #140D1C;
+    --card_sender_background_color: linear-gradient(to bottom left, #663db3 0%, #6011af 100%);
+    --card_sender_h2_color: #ffffff;
+    --card_sender_p_color: #F7C7FF;
+    --card_sender_label_color: #B7B7B7;
+    --card_recipient_background_color: linear-gradient(to bottom left, #4c9434 0%, #5a8e45 100%);
+    --card_recipient_h2_color: #ffffff;
+    --card_recipient_p_color: #C7FFD1;
+    --card_recipient_label_color: rgb(255, 255, 255);
+    --h1_color: #9BD9FF;
+    --text_status: #ffffff;
+    --text_status_now_color: #afff95;
+    --engage_color: #69C6FF;
+    --mss_color: #00B35A;
+    --logs_background: #14171A;
+    --logs_text_color: #8FBFFF;
+    --logs_element_color: #99C1F6;
 }
 
 .mailings_settings{
@@ -9,87 +23,225 @@
     gap: 15px;
     width: 1185px;
     align-items: center;
-    margin: 55px auto;
+    margin: 35px auto;
 }
 .mailings_settings_card{
  display: flex;
     flex-direction: column;
-    gap: 18px;
+    width: 450px;
     align-items: flex-start;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.09);
     padding: 43px 60px 43px 60px;
 }
-.mailings_settings_card h3{
-    font-size: 38px;
+.mailings_settings_card h2{
+    /*font-size: 38px to 28px;*/
+    font-size: clamp(1.75rem, 1.5495rem + 0.9434vw, 2.375rem);
     font-weight: 500;
 }
 .mailings_settings_card p{
-    font-size: 16px;
+    /*font-size: 16px to 14px;*/
+    font-size: clamp(0.875rem, 0.8349rem + 0.1887vw, 1rem);
     font-weight: 500;
 }
 .mailings_settings_label {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
+    margin-top: 10px;
 }
-.mailings_settings_label .select_wrapper{
-    position: relative;
-    width: 247px;
+/*sender colors*/
+.sender_card_colors.mailings_settings_card{
+    background: var(--card_sender_background_color);
 }
-.mailings_settings_label .select_wrapper select {
-    position: relative;
-    display: block;
-    width: 100%;
-    background: var(--select_background_color);
-    border-radius: 30px;
-    padding: 17px 0 17px 25px;
-    border: none;
-    outline: none;
-    color: var(--select_text_color);
-    font-size: 16px;
+.sender_card_colors.mailings_settings_card h2{
+    color: var(--card_sender_h2_color);
+}
+.sender_card_colors.mailings_settings_card p{
+    color: var(--card_sender_p_color);
+}
+
+.sender_card_colors .mailings_settings_label label{
+    color: var(--card_recipient_label_color);
+    font-weight: 600;
+}
+
+/*recipient colors*/
+.recipient_card_colors.mailings_settings_card{
+    background: var(--card_recipient_background_color);
+}
+.recipient_card_colors.mailings_settings_card h2{
+    color: var(--card_recipient_h2_color);
+}
+.recipient_card_colors.mailings_settings_card p{
+    color: var(--card_recipient_p_color);
+}
+
+.recipient_card_colors .mailings_settings_label label{
+    color: var(--card_recipient_label_color);
+    font-weight: 600;
+}
+
+.mailings_status{
+    width: 1020px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    gap: 12px;
+}
+.mailings_status h1{
+    /*font-size: 38px to 28px;*/
+    font-size: clamp(1.75rem, 1.5495rem + 0.9434vw, 2.375rem);
     font-weight: 500;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: start;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    color: var(--h1_color);
 }
-
-/* кастомная стрелка */
-.mailings_settings_label .select_wrapper::after {
-    content: "";
-    color: #a87cc3;
-    position: absolute;
-    background-image: url('/static/select_arrow.svg');
-    background-repeat: no-repeat;
-    width: 14px;
-    height: 9px;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 1s ease-in-out;
-    pointer-events: none;
-}
-
-/* Hover эффект */
-.mailings_settings_label .select_wrapper select:hover {
-    background: linear-gradient(145deg, #1a091e, #220b2b);
-}
-
-/* Focus (при выборе) */
-.mailings_settings_label .select_wrapper select:focus {
-    box-shadow: 0 0 10px rgba(207, 161, 255, 0.5);
-}
-.mailings_settings_label .select_wrapper:has(select:focus)::after {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-/* Стиль выпадающего списка */
-.mailings_settings_label .select_wrapper select option {
-    background: #120515;
-    color: #e1c5ff;
+.mailing_status_now{
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+    align-items: center;
+    color: var(--text_status);
     font-size: 16px;
-    padding: 10px;
+    font-weight: 400;
 }
+.mailing_status_now button{
+    /*font-size: 18px to 16px;*/
+    font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
+}
+#engage_mms{
+    display: flex;
+    flex-direction: row;
+    margin-top: 22px;
+    gap: 5px;
+    /*font-size: 18px to 14px;*/
+    font-size: clamp(0.875rem, 0.7948rem + 0.3774vw, 1.125rem);
+    font-weight: 400;
+    color: var(--text_status_now_color);
+}
+#engage_mms span{
+  font-weight: 500;
+}
+.engage{
+color: var(--engage_color);
+}
+.mms{
+    color: var(--mss_color);
+}
+
+.mailings_server_logs{
+    width: 908px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    padding: 35px 57px 35px 57px;
+    border-radius: 25px;
+    background-color: var(--logs_background);
+}
+.mailings_server_logs h3{
+    color: var(--logs_text_color);
+    /*font-size: 22px to 18px;*/
+    font-size: clamp(1.125rem, 1.0448rem + 0.3774vw, 1.375rem);
+    font-weight: 500;
+}
+.mailings_server_logs ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    max-height: 247px;
+    overflow-y: auto;
+    font-weight: 400;
+    color: var(--logs_element_color);
+}
+.mailings_server_logs ul li{
+    /*18 to 14px*/
+    font-size: clamp(0.875rem, 0.7948rem + 0.3774vw, 1.125rem);
+}
+.mailings_server_logs ul::-webkit-scrollbar {
+    width: 29px; /* Ширина скролла */
+}
+
+.mailings_server_logs ul::-webkit-scrollbar-thumb {
+    background: #5fa0f6; /* Цвет ползунка */
+    border-radius: 25px; /* Закругление */
+}
+
+.mailings_server_logs ul::-webkit-scrollbar-track {
+    background: #0A0B0F; /* Цвет фона скроллбара */
+    border-radius: 25px;
+}
+.cursor {
+    display: inline-block;
+    width: 10px;
+    color: #9BFF9F; /* Основной цвет неона */
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #9BFF9F, 0 0 10px #9BFF9F, 0 0 20px #66FF66, 0 0 30px #33FF33;
+    transition: opacity 0.2s ease-in-out;
+}
+.visible {
+    opacity: 1;
+}
+.cursor:not(.visible) {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1380px) {
+.mailings_settings{
+    width: 90%;
+}
+.mailings_settings_card{
+    width: 90%;
+}
+    .mailings_settings_label{
+        width: 90%;
+    }
+    .mailings_status{
+        width: 80%;
+        gap: 5px;
+    }
+    .mailings_server_logs{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .mailings_settings{
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mailings_settings_card{
+        padding: 35px 25px 33px 35px;
+        gap: 0;
+        width: 85%;
+    }
+    .sender_card_colors .mailings_settings_label label, .recipient_card_colors .mailings_settings_label label{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    #engage_mms{
+        margin-top: 10px;
+    }
+    .mailings_settings_label{
+        gap: 10px;
+    }
+
+    .mailings_server_logs{
+        width: 70%;
+        padding: 35px 37px 35px 37px;
+    }
+    .mailings_server_logs ul{
+        margin-top: 25px;
+        overflow-y: unset;
+        overflow-x: auto;
+        flex-direction: row;
+        gap: 25px;
+        padding-bottom: 20px;
+        white-space: nowrap;
+    }
+}
+

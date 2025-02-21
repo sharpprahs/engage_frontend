@@ -16,8 +16,8 @@
 
 <section id="section_setting">
     <div class="settings_card">
-        <h2>общие настройки</h2>
-        <p>общие настройки системы</p>
+        <h2>Общие настройки</h2>
+        <p>Общие настройки системы</p>
         <div class="settings_panel">
            <div class="settings_panel_element">
                <label for="max_lead">max_lead</label>

@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="" />
+    <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/styles/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/mailings/mailings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/mailings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/settings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/settings.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +37,12 @@
         <option value="Footer" />
         <option value="+page" />
         <option value="SelectCard" />
+        <option value="SelectDropdown" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,7 +60,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/overflow/Desktop/frontend_engage_mailer/static&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/overflow/Desktop/test&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -131,7 +150,11 @@
       <workItem from="1739913784013" duration="14024000" />
       <workItem from="1739963615100" duration="77000" />
       <workItem from="1739971258766" duration="11299000" />
-      <workItem from="1740017505992" duration="7141000" />
+      <workItem from="1740017505992" duration="20914000" />
+      <workItem from="1740053038691" duration="267000" />
+      <workItem from="1740059971940" duration="43810000" />
+      <workItem from="1740143708417" duration="358000" />
+      <workItem from="1740144135916" duration="276000" />
     </task>
     <servers />
   </component>

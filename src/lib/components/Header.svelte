@@ -1,7 +1,7 @@
 <script>
 	import '$lib/styles/header.css';
 	import { page } from '$app/state';
-	import { onMount } from 'svelte';
+	import { beforeNavigate } from '$app/navigation';
 	let isMenuOpen = false;
 
 	function toggleMenu() {
@@ -9,12 +9,10 @@
 		document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
 	}
 
-	// Закрытие меню при изменении страницы
-	onMount(() => {
-		return () => {
-			isMenuOpen = false;
-			document.body.style.overflow = 'auto';
-		};
+	// Закрываем меню при каждом переходе на новую страницу
+	beforeNavigate(() => {
+		isMenuOpen = false;
+		document.body.style.overflow = 'auto';
 	});
 </script>
 

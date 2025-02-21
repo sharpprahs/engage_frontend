@@ -8,8 +8,7 @@
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
 
-    background: rgb(19, 21, 23);
-    background: linear-gradient(0deg, rgba(19, 21, 23, 1) 0%, rgba(28, 34, 40, 1) 100%);
+    background: #1B2127;
 }
 
 /* Base body styles */
@@ -48,4 +47,26 @@ input, textarea {
     font: inherit;
     border: none;
     outline: none;
+}
+
+/* Уменьшаем ширину скролла */
+body::-webkit-scrollbar {
+    width: 15px; /* Для вертикального скролла */
+    height: 15px; /* Для горизонтального скролла */
+}
+
+/* Цвет и закругление ползунка */
+body::-webkit-scrollbar-thumb {
+    background: #3a3a3a; /* Цвет полоски */
+    border-radius: 55px;
+}
+
+/* Цвет фона скроллбара */
+body::-webkit-scrollbar-track {
+    background: rgba(16, 16, 16, 0.28); /* Цвет фона */
+}
+
+/* При наведении делаем ползунок темнее */
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
