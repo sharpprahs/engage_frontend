@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/styles/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/mailings/mailings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/mailings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/settings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/settings.css" afterDir="false" />
-    </list>
+    <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,6 +141,7 @@
       <workItem from="1740059971940" duration="43810000" />
       <workItem from="1740143708417" duration="358000" />
       <workItem from="1740144135916" duration="276000" />
+      <workItem from="1740146746164" duration="492000" />
     </task>
     <servers />
   </component>
