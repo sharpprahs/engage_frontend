@@ -200,13 +200,17 @@ color: var(--engage_color);
     align-items: center;
 }
 .toggle_scroll{
-  color: #ffffff;
+  color: #889fff;
     display: flex;
     position: relative;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.toggle_scroll.active{
+    color: #9BFF9F;
     padding-left: 35px;
 }
-.toggle_scroll:before{
+.toggle_scroll.active:before{
     position: absolute;
     content: "";
     width: 25px;
@@ -215,6 +219,7 @@ color: var(--engage_color);
     top: 0;
     background-image: url('/auto_scroll.svg');
     background-size: contain;
+    transition: 0.5s ease-in-out;
 }
 #log_time{
     color: #ffffff6e;

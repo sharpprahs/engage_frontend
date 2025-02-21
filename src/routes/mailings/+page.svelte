@@ -4,9 +4,10 @@
 	import "$lib/styles/button_default.css"
 	import SelectCard from '$lib/components/SelectCard.svelte';
 	import type { PageProps } from './$types';
-	import { writable, get } from "svelte/store";
+	import { writable } from "svelte/store";
 	import { useTypingEffect } from "$lib/utils/typingEffect";
-	import { onDestroy, onMount } from 'svelte';
+	import { useAutoScroll } from "$lib/utils/autoScroll";
+
 
 
 	let title = "EngageMailer - рассылка сообщений";
@@ -37,52 +38,22 @@
 		pauseBetweenCycles: 5000
 	});
 
-	let autoScroll = writable(true);
-	let logsContainer: HTMLUListElement;
+	// --- Автоскролл ---
+	let logsContainer: HTMLUListElement | null = null;
+	// Переменная autoScroll – это store, уже объявленный через writable в useAutoScroll
+	let autoScroll;
+	// Объявляем toggleAutoScroll через $state, чтобы изменения отслеживались корректно
+	let toggleAutoScroll = $state(() => () => {});
 
-	// 🚀 Функция автоскролла (работает постоянно)
-	function scrollToBottom() {
-		if (logsContainer && get(autoScroll)) {
-			logsContainer.scrollTop = logsContainer.scrollHeight;
-		}
-	}
-
-	// 🚀 Отслеживание изменений в списке логов
-	let observer: MutationObserver;
-	onMount(() => {
+	// Когда logsContainer станет доступен, вызываем useAutoScroll
+	$effect(() => {
 		if (logsContainer) {
-			console.log("logsContainer найден:", logsContainer);
-
-			observer = new MutationObserver(() => {
-				scrollToBottom(); // Постоянный автоскролл
-			});
-
-			observer.observe(logsContainer, { childList: true, subtree: true });
-
-			// Чтобы сразу проскроллить при загрузке
-			scrollToBottom();
+			const { autoScroll: as, toggleAutoScroll: ta } = useAutoScroll(logsContainer);
+			autoScroll = as;
+			toggleAutoScroll = ta;
 		}
 	});
 
-	// 🚀 Очистка при размонтировании
-	onDestroy(() => {
-		if (observer) observer.disconnect();
-	});
-
-	// 🚀 Функция переключения автоскролла
-	function toggleAutoScroll() {
-		autoScroll.update(enabled => {
-			const newState = !enabled;
-			console.log("Автоскролл:", newState ? "включен" : "выключен");
-
-			// Если включаем автоскролл, сразу скроллим
-			if (newState) {
-				scrollToBottom();
-			}
-
-			return newState;
-		});
-	}
 </script>
 
 <svelte:head>
@@ -135,7 +106,8 @@
 
 <!-- Server Logs -->
 <section class="mailings_server_logs">
-	<div class="logs_row"><h3>Логи сервера</h3> 	<button onclick={() => toggleAutoScroll()} class="toggle_scroll">
+	<div class="logs_row"><h3>Логи сервера</h3>
+		<button onclick={toggleAutoScroll} class="toggle_scroll" 	class:active={$autoScroll}>
 		{$autoScroll ? "Остановить автоскролл" : "Включить автоскролл"}
 	</button></div>
 	<ul bind:this={logsContainer}>
