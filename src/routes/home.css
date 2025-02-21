@@ -116,9 +116,10 @@
 @media screen and (max-width: 760px) {
     .general_container{
         width: 80%;
+        align-items: center;
     }
     .general_container form input{
-        width: 80%;
+        width: 85%;
     }
 }
 @media screen and (max-width: 430px) {
@@ -130,6 +131,7 @@
     }
     .general_container h1{
         width: 100%;
+        padding-left: 10%;
     }
     .general_container p{
         margin-top: 20px;
