@@ -11,7 +11,8 @@
     --text_status: #ffffff;
     --text_status_now_color: #afff95;
     --engage_color: #69C6FF;
-    --mss_color: #00B35A;
+    --mss_color: #94b1ff;
+    /*--mss_color: #00B35A;*/
     --logs_background: #14171A;
     --logs_text_color: #ffffff;
     --logs_element_color: #99C1F6;
@@ -134,7 +135,7 @@ color: var(--engage_color);
     display: flex;
     margin-top: 20px;
     flex-direction: column;
-    padding: 35px 57px 35px 57px;
+    padding: 45px 57px 55px 57px;
     border-radius: 25px;
     background-color: var(--logs_background);
 }

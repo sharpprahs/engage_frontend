@@ -111,7 +111,7 @@
 		{$autoScroll ? "Остановить автоскролл" : "Включить автоскролл"}
 	</button></div>
 	<ul bind:this={logsContainer}>
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -121,7 +121,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -131,7 +131,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -141,7 +141,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -151,7 +151,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -161,7 +161,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -171,7 +171,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>I Say:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
