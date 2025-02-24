@@ -42,12 +42,6 @@
     font-size: 22px;
     font-weight: 500;
 }
-.reading_status_container .img_container {
-    position: relative;
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-}
 
 .reading_status_container .img_container {
     position: relative;
@@ -62,8 +56,11 @@
     margin-top: 4px;
     background-size: contain;
     display: block;
+    backface-visibility: hidden;
+    animation: image-animation 5s infinite cubic-bezier(0.65, 0, 0.35, 1);
 }
 
+/* Линия сканера (псевдоэлементы) */
 .reading_status_container .img_container::before,
 .reading_status_container .img_container::after {
     content: "";
@@ -88,16 +85,59 @@
     0 0 20px rgba(102, 255, 102, 0.3),
     0 0 25px rgba(51, 255, 51, 0.2);
     filter: blur(8px);
-
     animation: scan 5s ease-in-out infinite, fade 5s linear infinite;
 }
 
+/* Анимация сканера */
 @keyframes scan {
     0% { top: 10%; }
     50% { top: 90%; }
     100% { top: 10%; }
 }
 
+/* Анимация изображения с поворотами, сжатием и отскоком */
+@keyframes image-animation {
+    0%, 50% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-7deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(-6deg);
+    }
+    40% {
+        transform: rotate(4deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    /* Фаза сжатия (подъем сканера) */
+    60% {
+        transform: scaleY(0.92) translateY(2px);
+    }
+    70% {
+        transform: scaleY(0.88) translateY(-2px);
+    }
+    80% {
+        transform: scaleY(0.92) translateY(1px);
+    }
+    /* Отскок перед восстановлением */
+    90% {
+        transform: scaleY(1.03) translateY(-1px);
+    }
+    95% {
+        transform: scaleY(1) rotate(0.5deg);
+    }
+    100% {
+        transform: scaleY(1) rotate(0deg);
+    }
+}
+
+/* Анимация для плавного затухания сканирующей линии */
 @keyframes fade {
     0% { opacity: 0.5; }
     50% { opacity: 0.3; }
