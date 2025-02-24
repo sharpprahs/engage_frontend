@@ -1,3 +1,10 @@
+:root{
+  --pagination_default_bc: rgba(255, 255, 255, 0.08);
+  --pagination_default_active_tc: #00ff99;
+  --pagination_default_active_bc: rgba(29, 79, 30, 0.12);
+    --pagination_default_tc: #ffffff;
+}
+
 .pagination_default{
     display: flex;
     flex-direction: row;
@@ -26,13 +33,13 @@
     transform: rotate(180deg);
 }
 .pagination_item{
-    background-color: rgba(255, 255, 255, 0.08);
-    color: #FFFFFF;
+    background-color: var(--pagination_default_bc);
+    color: var(--pagination_default_tc);
     width: 32px;
     height: 32px;
     border-radius: 10px;
 }
 .pagination_item.active{
-    color: #00ff99;
-    background-color: rgba(29, 79, 30, 0.12);
+    color: var(--pagination_default_active_tc);
+    background-color: var(--pagination_default_active_bc);
 }

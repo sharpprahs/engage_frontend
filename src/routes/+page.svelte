@@ -2,6 +2,7 @@
     import "./home.css";
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import AgentGreen  from '$lib/icons/agent_green.svelte';
     let secretKey = '';
     let title = "EngageMailer - улучшите коммуникацию с лидами";
     let description = "EngageMailer - инструмент для автоматизированной email-рассылки, CRM и эффективной работы с клиентами.";
@@ -28,7 +29,7 @@
         EngageMailer
         <span>Alpha</span>
         <div class="icon_container">
-            <img src="/types_of_mail/mail_green_neon.svg" alt="mail service">
+            <AgentGreen/>
             <img src="/types_of_mail/outlook_black.svg" alt="outlook service">
             <img src="/types_of_mail/gmail_black.svg" alt="gmail service">
             <img src="/types_of_mail/yandex_black.svg" alt="yandex service">

@@ -5,6 +5,7 @@ import type { PageProps } from './$types';
 import { writable} from 'svelte/store';
 import "$lib/styles/select_default.css"
 import "$lib/styles/button_default.css"
+	import EmailGreen  from '$lib/icons/email_green.svelte';
 import "$lib/styles/cards_default_choice.css"
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectDropdown from '$lib/components/SelectDropdown.svelte';
@@ -62,11 +63,9 @@ function handleSenderChange(value: string) {
 		specialClassName="default_card_label select_wrapper_default sender_select_colors"
 	/>
 	<div class="reading_status_container">
-    <h2><div class="img_container"><img src="/engage_reading_v2.svg" alt="Чтение сообщений"></div>Статус чтения</h2>
+    <h2><div class="img_container"><EmailGreen/></div>Статус чтения</h2>
 		<p>рассылка запущена чтение идёт полным ходом...</p>
 		<div class="progress_wrapper">
-			<!-- Пример полосы прогресса с полосатой анимацией -->
-
 			<div class="custom-progress">
 				<div class="progress-fill" style="width: {progressValue}%"></div>
 			</div>

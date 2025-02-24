@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/styles/pagination_default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/pagination_default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/dialogues/dialogues.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dialogues/dialogues.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/mailings/mailings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/mailings.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,8 @@
         <option value="NotFound" />
         <option value="+page" />
         <option value="Pagination" />
+        <option value="agent_green" />
+        <option value="email" />
       </list>
     </option>
   </component>
@@ -154,7 +161,7 @@
       <workItem from="1740334859698" duration="9006000" />
       <workItem from="1740349744585" duration="3999000" />
       <workItem from="1740381556888" duration="7527000" />
-      <workItem from="1740406124209" duration="5890000" />
+      <workItem from="1740406124209" duration="12995000" />
     </task>
     <servers />
   </component>
