@@ -1,0 +1,38 @@
+.pagination_default{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin-top: 60px;
+}
+.pagination_default_arrow{
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pagination_default_arrow, .pagination_item {
+    position: relative;
+    z-index: 1;
+}
+.left_arrow{
+ background-image: url("/green_arrow_left.svg");
+
+}
+.right_arrow{
+    background-image: url("/green_arrow_left.svg");
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.pagination_item{
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+}
+.pagination_item.active{
+    color: #00ff99;
+    background-color: rgba(29, 79, 30, 0.12);
+}

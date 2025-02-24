@@ -1,0 +1,87 @@
+:root{
+    --card_sender_background_color: linear-gradient(to bottom left, #663db3 0%, #6011af 100%);
+    --card_sender_h2_color: #ffffff;
+    --card_sender_p_color: #F7C7FF;
+    --card_sender_label_color: #ffffff;
+    --card_recipient_background_color: linear-gradient(to bottom left, #4c9434 0%, #5a8e45 100%);
+    --card_recipient_h2_color: #ffffff;
+    --card_recipient_p_color: #C7FFD1;
+    --card_recipient_label_color: #ffffff;
+}
+
+
+.default_card_container{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    align-items: flex-start;
+    border-radius: 25px;
+    padding: 43px 60px 43px 60px;
+}
+.default_card_container h2{
+    /*font-size: 38px to 28px;*/
+    font-size: clamp(1.75rem, 1.5495rem + 0.9434vw, 2.375rem);
+    font-weight: 500;
+}
+.default_card_container p{
+    /*font-size: 16px to 14px;*/
+    font-size: clamp(0.875rem, 0.8349rem + 0.1887vw, 1rem);
+    font-weight: 500;
+}
+.default_card_label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sender_card_colors .default_card_label label{
+    color: var(--card_sender_label_color);
+    font-weight: 500;
+}
+/*sender colors*/
+.sender_card_colors.default_card_container{
+    background: var(--card_sender_background_color);
+}
+.sender_card_colors.default_card_container h2{
+    color: var(--card_sender_h2_color);
+}
+.sender_card_colors.default_card_container p{
+    color: var(--card_sender_p_color);
+}
+/*recipient colors*/
+.recipient_card_colors.default_card_container{
+    background: var(--card_recipient_background_color);
+}
+.recipient_card_colors.default_card_container h2{
+    color: var(--card_recipient_h2_color);
+}
+.recipient_card_colors.default_card_container p{
+    color: var(--card_recipient_p_color);
+}
+
+.recipient_card_colors .default_card_label label{
+    color: var(--card_recipient_label_color);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1380px) {
+
+    .default_card_container{
+        width: 90%;
+    }
+    .default_card_label{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .default_card_container{
+        padding: 35px 25px 33px 35px;
+        gap: 0;
+        width: 85%;
+    }
+    .default_card_label{
+        gap: 10px;
+    }
+}

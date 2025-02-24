@@ -156,4 +156,8 @@ background: var(--background_card);
         padding: 10px;
         text-align: center;
     }
+    .saved_btn{
+        width: 100%;
+        padding: 15px 36px 15px 36px;
+    }
 }

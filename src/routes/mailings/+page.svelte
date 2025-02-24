@@ -2,6 +2,7 @@
 	import "./mailings.css";
 	import "$lib/styles/select_default.css"
 	import "$lib/styles/button_default.css"
+	import "$lib/styles/cards_default_choice.css"
 	import SelectCard from '$lib/components/SelectCard.svelte';
 	import type { PageProps } from './$types';
 	import { writable } from "svelte/store";
@@ -75,8 +76,8 @@
 		options={data.senderAccounts}
 		selectedValue={$selectedSenderValue}
 		onChange={handleSenderChange}
-		className="mailings_settings_card sender_card_colors"
-		specialClassName="mailings_settings_label select_wrapper_default sender_select_colors"
+		className="default_card_container sender_card_colors"
+		specialClassName="default_card_label select_wrapper_default sender_select_colors"
 	/>
 
 	<!-- ✅ Селект получателей -->
@@ -86,8 +87,8 @@
 		options={data.recipientAccounts}
 		selectedValue={$selectedRecipientValue}
 		onChange={handleRecipientChange}
-	className="mailings_settings_card recipient_card_colors"
-	specialClassName="mailings_settings_label select_wrapper_default recipient_select_colors"
+	className="default_card_container recipient_card_colors"
+	specialClassName="default_card_label select_wrapper_default recipient_select_colors"
 	/>
 </section>
 
@@ -111,7 +112,7 @@
 		{$autoScroll ? "Остановить автоскролл" : "Включить автоскролл"}
 	</button></div>
 	<ul bind:this={logsContainer}>
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -121,7 +122,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -131,7 +132,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -141,7 +142,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -151,7 +152,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -161,7 +162,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
@@ -171,7 +172,7 @@
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<br><span class="log_action">Найдены сессионные куки, используем их для входа</span></div></li>
 
-		<li><div class="log_title"><span id="log_time">12:22</span>EMMS:</div><div>
+		<li><div class="log_title"><span id="log_time">12:22</span>Server:</div><div>
 			<span class="log_data">Отправитель: xxxczs@gmail.com</span>
 			<span class="log_data">Получатель: asdsad@list.ru</span>
 			<span class="log_data">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</span>
