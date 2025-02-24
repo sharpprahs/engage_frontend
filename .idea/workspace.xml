@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/mailings/mailings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/mailings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dialogues/dialogues.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dialogues/dialogues.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +154,7 @@
       <workItem from="1740321622944" duration="4161000" />
       <workItem from="1740334859698" duration="9006000" />
       <workItem from="1740349744585" duration="3999000" />
-      <workItem from="1740381556888" duration="5379000" />
+      <workItem from="1740381556888" duration="6765000" />
     </task>
     <servers />
   </component>

@@ -62,7 +62,7 @@ function handleSenderChange(value: string) {
 		specialClassName="default_card_label select_wrapper_default sender_select_colors"
 	/>
 	<div class="reading_status_container">
-    <h2><div class="img_container"><img src="/engage_reading.svg" alt="Чтение сообщений"></div>Статус чтения</h2>
+    <h2><div class="img_container"><img src="/engage_reading_v2.svg" alt="Чтение сообщений"></div>Статус чтения</h2>
 		<p>рассылка запущена чтение идёт полным ходом...</p>
 		<div class="progress_wrapper">
 			<!-- Пример полосы прогресса с полосатой анимацией -->
