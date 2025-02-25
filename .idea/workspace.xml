@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/proxies/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/proxies/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ProxyItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ProxyItem.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/proxies/proxies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/proxies/proxies.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +161,8 @@
       <workItem from="1740406124209" duration="13100000" />
       <workItem from="1740438888619" duration="21194000" />
       <workItem from="1740465636455" duration="3062000" />
-      <workItem from="1740473373164" duration="900000" />
+      <workItem from="1740473373164" duration="946000" />
+      <workItem from="1740474957125" duration="1266000" />
     </task>
     <servers />
   </component>

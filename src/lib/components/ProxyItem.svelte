@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { writable } from 'svelte/store';
+	import { writable, get } from 'svelte/store';
 
 	// Принимаем данные прокси через пропсы
 	export let proxyType: 'M' | 'O' = 'M'; // начальное значение типа прокси
@@ -14,6 +14,32 @@
 	// Состояние для показа/скрытия пароля
 	let showPassword = false;
 
+	// Обработчик ввода для мобильных и десктопов (on:input)
+	function handleInput(event: Event) {
+		const input = event.target as HTMLInputElement;
+		const value = input.value.toUpperCase();
+
+		// Разрешаем только один символ M или O
+		if (value === 'M' || value === 'O') {
+			currentValueProxyType.set(value as 'M' | 'O');
+		} else {
+			// Если значение некорректное (например, удаление или лишние символы),
+			// возвращаем предыдущее корректное значение
+			input.value = get(currentValueProxyType);
+		}
+	}
+
+	// Дополнительная обработка вставки (on:paste)
+	function handlePaste(event: ClipboardEvent) {
+		event.preventDefault();
+		const pasteText = event.clipboardData?.getData('text') || '';
+		const keyUpper = pasteText.trim().toUpperCase().slice(-1);
+		if (keyUpper === 'M' || keyUpper === 'O') {
+			currentValueProxyType.set(keyUpper as 'M' | 'O');
+		}
+	}
+
+	// Если хочется оставить обработку keydown для десктопа, можно оставить её
 	function handleKeydown(event: KeyboardEvent) {
 		const navKeys = ['ArrowLeft', 'ArrowRight', 'Home', 'End', 'Tab'];
 		if (navKeys.includes(event.key)) return;
@@ -34,15 +60,6 @@
 		}
 	}
 
-	function handlePaste(event: ClipboardEvent) {
-		event.preventDefault();
-		const pasteText = event.clipboardData?.getData('text') || '';
-		const keyUpper = pasteText.trim().toUpperCase().slice(-1);
-		if (keyUpper === 'M' || keyUpper === 'O') {
-			currentValueProxyType.set(keyUpper as 'M' | 'O');
-		}
-	}
-
 	function togglePassword() {
 		showPassword = !showPassword;
 	}
@@ -53,17 +70,20 @@
 		<!-- Инпут для выбора типа прокси -->
 		<input
 			bind:value={$currentValueProxyType}
-			on:keydown={handleKeydown}
+			on:input={handleInput}
 			on:paste={handlePaste}
+			on:keydown={handleKeydown}
+			inputmode="text"
+			pattern="^[MmOo]$"
 			maxlength="1"
-			class="type_proxy"
-			class:type_proxy_m={$currentValueProxyType === 'M'}
-			class:type_proxy_o={$currentValueProxyType === 'O'}
+		class="type_proxy"
+		class:type_proxy_m={$currentValueProxyType === 'M'}
+		class:type_proxy_o={$currentValueProxyType === 'O'}
 		/>
 		<!-- Инпут для URL прокси -->
 		<input type="text" bind:value={proxyUrl} />
 	</div>
-	<div class="proxy_setting">
+	<form class="proxy_setting">
 		<input type="text" bind:value={proxySetting} />
 		<input type="text" bind:value={proxyUser} />
 		<div class="password_proxy">
@@ -80,5 +100,5 @@
 			<button class="paused" aria-label="Приостановить работу прокси"></button>
 			<button class="delete" aria-label="Удалить прокси"></button>
 		</div>
-	</div>
+	</form>
 </li>
