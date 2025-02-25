@@ -8,8 +8,15 @@
     --proxy_named_color: #9BFF9F;
     --proxy_item_text_color: #ffffff;
 }
-
-
+/*animations*/
+@keyframes spin {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
 .choice_senders_to_download_proxies{
     display: flex;
     flex-direction: row;
@@ -68,6 +75,8 @@
     background-image: url('/pull_proxies.svg');
     background-size: contain;
     transition: 0.5s ease-in-out;
+    /* Анимация вращения: 10s - скорость, linear - постоянная скорость, infinite - бесконечное повторение */
+    animation: spin 10s linear infinite;
 }
 
 .file_upload{
@@ -229,14 +238,23 @@ width: 260px;
         gap: 25px;
         margin: 0 auto;
     }
+    .choice_senders_to_download_proxies h3{
+        display: none;
+    }
     .pull_proxies_container{
-        margin-top: 20px;
+        margin-top: 15px;
         /*width: 80%;*/
-        padding: 30px 15px;
+        padding: 30px 15px 35px 15px;
     }
     .general_proxies{
+        width: fit-content;
+        align-items: flex-start;
+        margin-left: 9%;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
+    }
+    .upload_button:hover {
+        background: transparent;
     }
     .general_proxies h1{
         margin-left: unset;
@@ -248,9 +266,10 @@ width: 260px;
         width: 100%;
     }
     .proxies_list li{
-        width: 85%;
+        min-width: 276px;
         padding: 30px 20px 0 20px;
         overflow: hidden;
+        scroll-snap-align: center;
     }
     .named_proxy{
         gap: unset;
@@ -259,21 +278,33 @@ width: 260px;
     .proxies_list{
         align-items: center;
         margin-top: 10px;
+        flex-direction: row;
+        gap: 25px;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
     .buttons_action_proxy{
         margin-top: 10px;
-        background-color: rgb(0 0 0 / 23%);
+        background-color: rgb(0 0 0 / 42%);
         width: 130%;
        padding: 10px 35px;
         margin-left: 25%;
     }
     :root{
     --proxy_named_color: #9bcfff;
+        --proxies_item_bc: rgb(255 255 255 / 2%);
 }
     .pagination_default{
-        width: 80%;
+        width: 85%;
         gap: 10px;
         margin-top: 22px;
+    }
+    .pagination_proxies{
+        margin-left: 7%;
     }
     .file_upload{
         flex-direction: column;

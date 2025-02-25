@@ -111,7 +111,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(180px); /* Опускаем на 20px */
+        transform: translateY(220px); /* Опускаем на 20px */
     }
     100% {
         transform: translateY(0);
@@ -660,6 +660,7 @@
     }
     .message_input input{
         width: 100%;
+        margin-top: 20px;
     }
     .message_input{
         width: 100%;
@@ -705,7 +706,8 @@
     .messages_list{
         margin-top: 35px;
         width: 80%;
-        height: 350px;
+        height: 310px;
+        overflow-y: auto;
     }
     .message_input{
         width: 80%;
