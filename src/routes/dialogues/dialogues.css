@@ -105,6 +105,22 @@
     50% { opacity: 0.3; }
     100% { opacity: 0; }
 }
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(180px); /* Опускаем на 20px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated_rect {
+    animation: upDown 5s infinite ease-in-out;
+}
 .senders_choice_panel{
     display: flex;
     flex-direction: row;
@@ -545,72 +561,11 @@
 .last_message{
     color: var(--short_text_message_tc);
 }
-.custom-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
+
+.pagination_dialogue{
+    margin-top: 60px;
 }
 
-.custom-pagination button {
-    padding: 8px 12px;
-    border: 1px solid #00ff99;
-    background-color: transparent;
-    color: #00ff99;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.custom-pagination button:hover {
-    background-color: #00ff99;
-    color: black;
-}
-
-.custom-pagination button.active {
-    background-color: #00ff99;
-    color: black;
-    font-weight: bold;
-}
-
-.custom-pagination button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 20px;
-}
-
-.pagination button {
-    padding: 8px 12px;
-    border: 1px solid #00ff99;
-    background-color: transparent;
-    color: #00ff99;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.pagination button:hover {
-    background-color: #00ff99;
-    color: black;
-}
-
-.pagination button.active {
-    background-color: #00ff99;
-    color: black;
-    font-weight: bold;
-}
-
-.pagination button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 .chat_box{
     display: flex;
     width: 100%;
@@ -725,9 +680,9 @@
     .user_list h1{
         margin-left: 15px;
     }
-    .pagination_default{
+    .pagination_dialogue{
         width: 100%;
-        margin-top: 20px !important;
+        margin-top: 20px;
         gap: 10px;
     }
     .count_incoming{

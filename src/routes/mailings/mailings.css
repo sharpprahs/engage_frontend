@@ -204,7 +204,7 @@ color: var(--engage_color);
         align-items: center;
     }
     .mailings_settings .default_card_container{
-        margin-left: -1%;
+        margin-left: -1.5%;
     }
 
     #engage_mms{

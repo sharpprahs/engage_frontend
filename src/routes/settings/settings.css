@@ -25,7 +25,7 @@ background: var(--background_card);
     border-radius: 25px;
     padding: 43px 63px 43px 63px;
 }
-.settings_card h2{
+.settings_card h1{
     /*font-size: 38px to 28px;*/
     font-size: clamp(1.75rem, 1.5495rem + 0.9434vw, 2.375rem);
     font-weight: 500;
@@ -92,7 +92,7 @@ background: var(--background_card);
     gap: 12px;
     width: 414px;
 }
-.description_content h3{
+.description_content h2{
     /*font-size: 28px to 26px;*/
     font-size: clamp(1.625rem, 1.5849rem + 0.1887vw, 1.75rem);
     font-weight: 500;

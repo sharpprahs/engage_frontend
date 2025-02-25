@@ -2,6 +2,7 @@
 	import '$lib/styles/header.css';
 	import { page } from '$app/state';
 	import { beforeNavigate } from '$app/navigation';
+	import AgentGreen from '$lib/icons/agent_green.svelte';
 	let isMenuOpen = false;
 
 	function toggleMenu() {
@@ -17,16 +18,16 @@
 </script>
 
 <header>
-	<h1>
+	<a href="/">
 		EngageMailer
 		<span>alpha</span>
 		<div class="icon_container">
-			<img src="/types_of_mail/mail_green_neon.svg" alt="mail service">
+			<AgentGreen/>
 			<img src="/types_of_mail/outlook_black.svg" alt="outlook service">
 			<img src="/types_of_mail/gmail_black.svg" alt="gmail service">
 			<img src="/types_of_mail/yandex_black.svg" alt="yandex service">
 		</div>
-	</h1>
+	</a>
 	<ul id="pc_version">
 		<li>
 			<a href="/mailings" class:active={page.url.pathname === '/mailings'}>рассылки</a>

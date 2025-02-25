@@ -4,16 +4,18 @@ import SelectCard from '$lib/components/SelectCard.svelte';
 import type { PageProps } from './$types';
 import { writable} from 'svelte/store';
 import "$lib/styles/select_default.css"
+	import "$lib/styles/cards_default_choice.css"
 import "$lib/styles/button_default.css"
 	import EmailGreen  from '$lib/icons/email_green.svelte';
-import "$lib/styles/cards_default_choice.css"
 	import Pagination from '$lib/components/Pagination.svelte';
 	import SelectDropdown from '$lib/components/SelectDropdown.svelte';
+	import '$lib/styles/pagination_default.css';
+
 
 
 
 	let progressValue = 50;
-let title = "EngageMailer - диалоги";
+let title = "EngageMailer - Диалоги";
 let description = "EngageMailer - инструмент для автоматизированной email-рассылки, CRM и эффективной работы с клиентами.";
 
 let { data }: PageProps = $props();
@@ -114,6 +116,7 @@ function handleSenderChange(value: string) {
 		 </ul>
 		 <!-- Пагинация с номерами страниц -->
 		 <Pagination
+			 class="pagination_default pagination_dialogue"
 			 startValue={0}
 			 lastValue={totalPages}
 			 bind:currentValue={currentPage}

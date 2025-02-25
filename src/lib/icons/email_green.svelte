@@ -1,9 +1,9 @@
 <svg width="2367" height="1622" viewBox="0 0 2367 1622" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<g clip-path="url(#clip0_303_121)">
 		<rect x="662.383" y="194.216" width="215.55" height="603.539" rx="107.775" fill="#9BFF9F"/>
-		<rect x="719.862" y="266.066" width="100.59" height="229.92" rx="50.2949" fill="#459748"/>
+		<rect class="animated_rect" x="719.862" y="266.066" width="100.59" height="229.92" rx="50.2949" fill="#459748"/>
 		<rect x="1150.96" y="194.216" width="215.55" height="603.539" rx="107.775" fill="#9BFF9F"/>
-		<rect x="1208.44" y="266.066" width="100.59" height="229.92" rx="50.2949" fill="#459748"/>
+		<rect class="animated_rect"  x="1208.44" y="266.066" width="100.59" height="229.92" rx="50.2949" fill="#459748"/>
 		<path d="M1259.83 988.455C1226.63 1280.65 802.824 1280.4 764.965 988.768V988.768C763.744 979.365 771.062 971 780.543 971L1244.24 971C1253.61 971 1260.88 979.151 1259.83 988.455V988.455Z" fill="#9BFF9F"/>
 	</g>
 	<rect x="12.5" y="12.5" width="1999.19" height="1249" rx="68.9055" stroke="#9BFF9F" stroke-width="25"/>

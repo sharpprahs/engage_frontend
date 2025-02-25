@@ -17,6 +17,7 @@
     }
 }
 header{
+    gap: 45px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -24,7 +25,7 @@ header{
     padding: 61px 0 61px 0;
     position: relative;
 }
-header h1{
+header a{
     color: var(--h1_text_color_main);
     align-items: center;
     /*font-size: 32px to 24px;*/
@@ -34,7 +35,7 @@ header h1{
     gap: 15px;
     flex-direction: row;
 }
-header h1 span{
+header a span{
     font-weight: 500;
     color: var(--h1_text_color_version);
     /*font-size: 32px to 18px;*/
@@ -48,9 +49,11 @@ header .icon_container{
     height: 60px;
 }
 
-header .icon_container img:first-child{
-    margin-left: -13%;
-    margin-right: -10%;
+header .icon_container svg:first-child{
+    margin-right: 5px;
+    filter:
+            drop-shadow(0px 0px 12px rgba(99, 250, 109, 0.4))
+            drop-shadow(0px 0px 8px rgba(129, 255, 150, 0.25));
 }
 header ul{
     display: flex;
@@ -104,6 +107,9 @@ header ul li {
     bottom: 14%;
     align-items: center;
     justify-content: flex-start;
+}
+.menu_icon{
+    display: none;
 }
 
 @media screen and (max-width: 1380px) {
@@ -203,7 +209,7 @@ header ul li {
     header{
         padding: 41px 0 41px 0;
     }
-    header h1{
+    header a{
         gap: 10px
     }
 

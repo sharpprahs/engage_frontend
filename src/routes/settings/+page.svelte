@@ -1,6 +1,6 @@
 <script>
     import "./settings.css";
-    let title = "EngageMailer - настройки";
+    let title = "EngageMailer - Общие настройки";
     let description = "EngageMailer - настройки";
 </script>
 <svelte:head>
@@ -16,7 +16,7 @@
 
 <section id="section_setting">
     <div class="settings_card">
-        <h2>Общие настройки</h2>
+        <h1>Общие настройки</h1>
         <p>Общие настройки системы</p>
         <div class="settings_panel">
            <div class="settings_panel_element">
@@ -45,19 +45,19 @@
 
   <div class="description_container">
    <div class="description_content">
-   <h3>max_lead</h3>
+   <h2>max_lead</h2>
      <p>Максимально возможное количество новых диалогов за 1 день для одного аккаунта любой группы аккаунтов</p>
    </div>
     <div class="description_content">
-      <h3>proxy_range</h3>
+      <h2>proxy_range</h2>
       <p>Количество выводов, привязанных к 1 ip-адресу, в настоящее время с 1 ip-адреса может быть записано 100 выводов</p>
     </div>
     <div class="description_content">
-      <h3>send_time_interval</h3>
+      <h2>send_time_interval</h2>
       <p>Это значение является временным интервалом между параллельной отправкой приветственных сообщений, т.е. после отправки сообщения берется случайный интервал времени от 2 до 8 минут, и следующая отправка приветственного сообщения от следующего аккаунта основывается на значениях интервала.</p>
     </div>
     <div class="description_content">
-      <h3>proxy_min_speed</h3>
+      <h2>proxy_min_speed</h2>
       <p>Минимальная скорость прокси-сервера в настоящее время определена таким образом, что прокси-серверы со скоростью менее 20 мегабит в секунду будут считаться непригодными для использования.</p>
     </div>
   </div>

@@ -1,0 +1,288 @@
+:root{
+    --descripiton_h3_text_color: #777777;
+    --type_proxy_others_color: #9BFFFF;
+    --type_proxy_mobile_color: #CB9BFF;
+    --pull_proxies_container_bc: #0E1012;
+    --general_p_text_color: #ffffff;
+    --proxies_item_bc: #0A0C0D;
+    --proxy_named_color: #9BFF9F;
+    --proxy_item_text_color: #ffffff;
+}
+
+
+.choice_senders_to_download_proxies{
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+    width: 1185px;
+    align-items: center;
+    margin: 35px auto;
+}
+.choice_senders_to_download_proxies h3{
+    width: 624px;
+    line-height: 160%;
+    font-weight: 500;
+    /*16 to 14px*/
+    font-size: clamp(0.875rem, 0.8349rem + 0.1887vw, 1rem);
+    color: var(--descripiton_h3_text_color);
+}
+#mobile_proxy{
+    color: var(--type_proxy_mobile_color);
+}
+#others_proxy{
+    color: var(--type_proxy_others_color);
+}
+.pull_proxies_container{
+    display: flex;
+    flex-direction: column;
+    width: 1110px;
+    padding: 42px 40px 47px 40px;
+    border-radius: 25px;
+    background-color: var(--pull_proxies_container_bc);
+}
+.general_proxies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+}
+.general_proxies h1{
+    font-size: clamp(1.375rem, 1.2547rem + 0.566vw, 1.75rem);
+    font-weight: 500;
+    color: var(--general_p_text_color);
+    flex-direction: row;
+    gap: 25px;
+    position: relative;
+    padding-left: 40px;
+    margin-left: 20px;
+    align-items: center;
+}
+.general_proxies h1:before{
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+    background-image: url('/pull_proxies.svg');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.file_upload{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.upload_button {
+    color: #9BFF9F;
+    font-size: 16px;
+    padding: 15px 20px;
+    background: transparent;
+    /*border: 2px solid #9BFF9F;*/
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.upload_button:hover {
+    background: rgba(155, 255, 159, 0.1);
+}
+
+.file_data {
+    color: #8d8d8d;
+    font-size: 14px;
+}
+
+.proxies_list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 40px;
+}
+.proxies_list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 15px;
+    background-color: var(--proxies_item_bc);
+    padding: 25px 45px 25px 45px;
+    color: var(--proxy_item_text_color);
+    font-size: 18px;
+    font-weight: 500;
+}
+.proxies_list input{
+    background-color: transparent;
+    /*font-size: 18px to 16px;*/
+    font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
+}
+.named_proxy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.named_proxy input{
+    color: var(--proxy_named_color);
+    /*font-size: 22px to 18px;*/
+    font-size: clamp(1.125rem, 1.0448rem + 0.3774vw, 1.375rem);
+}
+.named_proxy input:last-child{
+width: 260px;
+}
+.type_proxy{
+    font-weight: 600;
+    margin-top: 3px;
+    width: 22px;
+}
+.type_proxy_m{
+    color: var(--type_proxy_mobile_color) !important;
+}
+.type_proxy_o{
+    color: var(--type_proxy_others_color) !important;
+}
+.proxy_setting{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+.proxy_setting input{
+    width: 150px;
+}
+.password_proxy input{
+    width: 90px;
+    transition: 0.1s ease-in-out;
+}
+.password_proxy{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+}
+.show_hidden_password{
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('/eye_show_password_white.svg');
+    transition: 0.1s ease-in-out;
+}
+.show_hidden_password.active{
+    background-image: url('/eye_hide_password_white.svg');
+}
+.buttons_action_proxy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.buttons_action_proxy button{
+    width: 49px;
+    height: 49px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.saved_changes{
+    background-image: url('/saved.svg');
+}
+.paused{
+    background-image: url('/pause.svg');
+}
+.delete{
+    background-image: url('/delete.svg');
+}
+
+.pagination_proxies{
+    margin-top: 35px;
+    margin-left: 30px;
+}
+@media screen and (max-width: 1380px) {
+  .choice_senders_to_download_proxies{
+      width: 90%;
+  }
+    .choice_senders_to_download_proxies h3{
+        width: 90%;
+    }
+    .pull_proxies_container{
+        width: 85%;
+    }
+    .proxies_list li{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .proxy_setting{
+        width: 90%;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 850px) {
+    .choice_senders_to_download_proxies{
+        flex-direction: column;
+        gap: 25px;
+        margin: 0 auto;
+    }
+    .pull_proxies_container{
+        margin-top: 20px;
+        /*width: 80%;*/
+        padding: 30px 15px;
+    }
+    .general_proxies{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .general_proxies h1{
+        margin-left: unset;
+    }
+    .proxy_setting{
+        gap: 15px;
+    }
+    .named_proxy input:last-child, .proxy_setting input{
+        width: 100%;
+    }
+    .proxies_list li{
+        width: 85%;
+        padding: 30px 20px 0 20px;
+        overflow: hidden;
+    }
+    .named_proxy{
+        gap: unset;
+        width: 90%;
+    }
+    .proxies_list{
+        align-items: center;
+        margin-top: 10px;
+    }
+    .buttons_action_proxy{
+        margin-top: 10px;
+        background-color: rgb(0 0 0 / 23%);
+        width: 130%;
+       padding: 10px 35px;
+        margin-left: 25%;
+    }
+    :root{
+    --proxy_named_color: #9bcfff;
+}
+    .pagination_default{
+        width: 80%;
+        gap: 10px;
+        margin-top: 22px;
+    }
+    .file_upload{
+        flex-direction: column;
+    }
+    .buttons_action_proxy button{
+        width: 42px;
+        height: 42px;
+    }
+    .password_proxy{
+        width: 100%;
+    }
+}

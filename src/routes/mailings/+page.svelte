@@ -11,7 +11,7 @@
 
 
 
-	let title = "EngageMailer - рассылка сообщений";
+	let title = "EngageMailer - Рассылка сообщений";
 	let description = "EngageMailer - инструмент для автоматизированной email-рассылки, CRM и эффективной работы с клиентами.";
 
 	let { data }: PageProps = $props();

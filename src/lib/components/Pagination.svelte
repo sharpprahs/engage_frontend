@@ -1,13 +1,14 @@
 <script lang="ts">
-   import '$lib/styles/pagination_default.css';
 
    let {
+      class: extraClass = '',
       startValue = 0,
       lastValue,
       currentValue = startValue,
       sizeRender = 5,
       onChange
    } = $props<{
+      class?: string;
       startValue?: number;
       lastValue: number;
       currentValue?: number;
@@ -53,7 +54,7 @@
    });
 </script>
 
-<div class="pagination_default">
+<div class="{extraClass}">
    <button
      class="pagination_default_arrow left_arrow"
      aria-label="previous page"
