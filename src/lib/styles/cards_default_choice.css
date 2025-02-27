@@ -7,9 +7,20 @@
     --card_recipient_h2_color: #ffffff;
     --card_recipient_p_color: #C7FFD1;
     --card_recipient_label_color: #ffffff;
+    --input_additional_input_bc: rgb(0 0 0 / 45%);
 }
-
-
+/*animations*/
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .default_card_container{
     display: flex;
     flex-direction: column;
@@ -34,7 +45,9 @@
     gap: 10px;
     margin-top: 10px;
 }
-
+.sender_card_colors .additional_input button{
+    background-color: #7c34d0;
+}
 .sender_card_colors .default_card_label label{
     color: var(--card_sender_label_color);
     font-weight: 500;
@@ -59,12 +72,57 @@
 .recipient_card_colors.default_card_container p{
     color: var(--card_recipient_p_color);
 }
+.recipient_card_colors .additional_input button{
+    background-color: #386927;
+}
 
 .recipient_card_colors .default_card_label label{
     color: var(--card_recipient_label_color);
     font-weight: 500;
 }
+.additional_input{
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    align-items: center;
+}
+.additional_input input{
+    background-color: var(--input_additional_input_bc);
+    color: white;
+    font-size: 16px;
+    padding: 17px 25px 17px 25px;
+    width: 197px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+    margin-left: -10px;
+}
 
+.additional_input::placeholder {
+    color: #aaa;
+}
+.additional_input button{
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    width: 43px;
+    border-radius: 15px;
+}
+.additional_input button svg{
+    width: 23px;
+    height: 23px;
+}
+
+
+.additional_input:focus {
+    background: #222; /* Изменение цвета фона при фокусе */
+}
 @media screen and (max-width: 1380px) {
 
     .default_card_container{

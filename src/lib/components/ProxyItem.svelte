@@ -83,7 +83,7 @@
 		<!-- Инпут для URL прокси -->
 		<input type="text" bind:value={proxyUrl} />
 	</div>
-	<form class="proxy_setting">
+	<form class="proxy_setting" on:submit|preventDefault>
 		<input type="text" bind:value={proxySetting} />
 		<input type="text" bind:value={proxyUser} />
 		<div class="password_proxy">

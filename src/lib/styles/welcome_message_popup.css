@@ -1,0 +1,269 @@
+.welcome_messages{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 95%;
+    padding-right: 15px;
+    overflow-y: auto;
+    height: 860px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.welcome_messages::-webkit-scrollbar {
+    border-radius: 55px;
+    width: 15px; /* Для вертикального скролла */
+    height: 8px; /* Для горизонтального скролла */
+}
+/* Цвет и закругление ползунка */
+.welcome_messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15); /* Цвет полоски */
+    border-radius: 55px;
+}
+
+/* Цвет фона скроллбара */
+.welcome_messages::-webkit-scrollbar-track {
+    border-radius: 55px;
+    background: rgba(255, 255, 255, 0.07); /* Цвет фона */
+}
+
+/* При наведении делаем ползунок темнее */
+.welcome_messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.09); /* Цвет полоски */
+}
+
+.welcome_messages li{
+    background-color: #0A0C0D;
+    padding: 36px 50px;
+    border-radius: 15px;
+    scroll-snap-align: center;
+}
+.welcome_named{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.welcome_named input{
+    color: #9BFF9F;
+    font-size: 22px;
+    background-color: transparent;
+    font-weight: 500;
+    width: 350px;
+}
+.welcome_named button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.theme{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 25px 35px 25px;
+    margin: 33px auto;
+    border-radius: 15px;
+    background-color: rgba(38, 96, 69, 0.06);
+}
+.theme span{
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+.theme textarea{
+    background-color: transparent;
+}
+.theme_items{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    gap: 15px;
+}
+/* Уменьшаем ширину скролла */
+.theme_items::-webkit-scrollbar {
+    border-radius: 55px;
+    width: 15px; /* Для вертикального скролла */
+    height: 8px; /* Для горизонтального скролла */
+}
+/* Цвет и закругление ползунка */
+.theme_items::-webkit-scrollbar-thumb {
+    background: #2cb966; /* Цвет полоски */
+    border-radius: 55px;
+}
+
+/* Цвет фона скроллбара */
+.theme_items::-webkit-scrollbar-track {
+    border-radius: 55px;
+    background: rgba(255, 255, 255, 0.07); /* Цвет фона */
+}
+
+/* При наведении делаем ползунок темнее */
+.theme_items::-webkit-scrollbar-thumb:hover {
+    background: #209851; /* Цвет полоски */
+}
+
+.theme_title{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin: 15px auto;
+    width: 95%;
+}
+.theme_title button{
+    color: #9BFF9F;
+}
+
+/* ✅ Добавляем поддержку жирного */
+.editor_container strong {
+    font-weight: bold !important;
+}
+
+/* ✅ Добавляем поддержку курсива */
+.editor_container em {
+    font-style: italic !important;
+}
+
+/* ✅ Добавляем поддержку подчеркивания */
+.editor_container u {
+    text-decoration: underline !important;
+}
+.ProseMirror{
+    padding: 10px;
+    transition: 0.1s ease-in-out;
+}
+/* ✅ Стили заголовков */
+.ProseMirror h1 {
+    font-size: 2em;
+    margin: 0.61em 0;
+}
+
+
+.ProseMirror h2 {
+    font-size: 1.5em;
+    margin: 0.53em 0;
+}
+
+.ProseMirror h3 {
+    font-size: 1.17em;
+    margin: 0.40em 0;
+}
+
+/* ✅ Стили выравнивания */
+.ProseMirror p {
+    text-align: inherit;
+}
+/* ✅ Стили для ссылок внутри редактора */
+.ProseMirror a {
+    color: #7DC2FF; /* Светло-голубой */
+    text-decoration: underline; /* Подчеркивание */
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.ProseMirror a:hover {
+    color: #4A90E2; /* Темно-синий при наведении */
+    text-decoration: none;
+}
+
+/* ✅ Ссылка без подчеркивания */
+.ProseMirror a.no-underline {
+    text-decoration: none;
+}
+
+/* ✅ Ссылка в кнопке */
+.ProseMirror a.button-link {
+    background-color: #4A90E2;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ProseMirror a.button-link:hover {
+    background-color: #357ABD;
+}
+/* ✅ Базовая обводка при фокусе */
+.ProseMirror:focus {
+    transition: 0.1s ease-in-out;
+    outline: 2px solid rgba(125, 255, 155, 0.38); /* Светло-голубая обводка */
+    border-radius: 5px;
+    border-color: rgba(74, 226, 104, 0.42);
+    box-shadow: 0 0 12px rgba(82, 226, 77, 0.66);
+}
+
+/*!* ✅ Обводка при фокусе внутри (если нажимаешь на текст внутри) *!*/
+/*.ProseMirror:focus-within {*/
+/*    outline: 2px solid #4A90E2; !* Темно-синяя обводка *!*/
+/*    box-shadow: 0 0 10px rgba(77, 144, 226, 0.5); !* Свечение *!*/
+/*}*/
+
+.popup_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.editor_toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.editor_container {
+    background: rgba(155, 255, 212, 0.04);
+    padding: 25px;
+    min-height: 200px;
+    border-radius: 10px;
+    color: white;
+}
+
+.editor_toolbar_button {
+    background: rgba(14, 61, 20, 0.44);
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.editor_toolbar_button:hover {
+    background: rgba(14, 61, 20, 0.62);
+}
+
+.editor_toolbar_button.active {
+    background: #0c5a2f;
+    border-color: #888;
+}
+.theme_input{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.theme_input svg{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 10px;
+    top: 50%;
+    right: 15px;
+    height: 10px;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(87%) saturate(288%) hue-rotate(60deg) brightness(101%) contrast(101%);
+}
+.theme_input input{
+    width: 150px;
+    /*border: 3px solid rgba(155, 255, 159, 0.08);*/
+    background-color: #294633b8;
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 35px 10px 15px;
+}

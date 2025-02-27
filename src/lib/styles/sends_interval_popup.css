@@ -1,0 +1,60 @@
+.popup_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+.popup_header h4{
+    font-size: 38px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.popup_header button{
+    width: 23px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.description_interval{
+    font-size: 16px;
+    color: #777777;
+    width: 90%;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.settings_panel_element_time_interval{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    width: 90%;
+}
+.settings_panel_element_time_interval label{
+    /*font-size: 18px to 16px;*/
+    font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
+    font-weight: 500;
+    color: var(--text_color);
+}
+.settings_panel_element_time_interval input{
+    background-color: #161719;
+    border-radius: 25px;
+    padding: 15px 10px 15px 30px;
+    width: 35px;
+}
+.settings_panel_element_time_interval span{
+    color: #2C2E30;
+    font-weight: 700;
+}
+
+.saved_change_time_interval{
+    background-color: #9BFF9F;
+    border-radius: 55px;
+    padding: 10px 36px 10px 36px;
+    font-weight: 600;
+    color: #000000;
+}
