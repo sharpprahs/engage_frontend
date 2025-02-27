@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ProxyItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ProxyItem.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SelectCard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/styles/cards_default_choice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/cards_default_choice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/styles/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Modal.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +175,7 @@
       <workItem from="1740474957125" duration="1432000" />
       <workItem from="1740501708286" duration="22255000" />
       <workItem from="1740536128325" duration="19431000" />
-      <workItem from="1740606282518" duration="17295000" />
+      <workItem from="1740606282518" duration="19331000" />
     </task>
     <servers />
   </component>

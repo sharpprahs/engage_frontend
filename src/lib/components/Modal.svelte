@@ -28,9 +28,8 @@
 {#if isOpen}
 	<div
 		class="popup_overlay"
-		role="dialog"
-		aria-modal="true"
-		tabindex="0"
+		role="button"
+		tabindex={0}
 		on:click={handleBackdropClick}
 		on:keydown={handleKeyDown}
 	>
