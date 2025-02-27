@@ -166,7 +166,7 @@
 	<section class="choice_accounts_container">
 		<SelectCard
 			title="Отправители"
-			label="База аккаунтов"
+			label="Аккаунты"
 			options={data.senderAccounts}
 			selectedValue={$selectedSenderValue}
 			onChange={handleSenderChange}
@@ -266,7 +266,7 @@
 	<section class="choice_accounts_container">
 		<SelectCard
 			title="Получатели"
-			label="База лидов"
+			label="База"
 			options={data.recipientAccounts}
 			selectedValue={$selectedRecipientValue}
 			onChange={handleRecipientChange}
@@ -283,7 +283,7 @@
 	</section>
 	<section class="pull_accounts_container">
 		<div class="general_accounts recipient_img">
-			<h1>Пул лидов</h1>
+			<h1>Пул базы</h1>
 			<div class="file_upload">
 				<input
 					type="file"

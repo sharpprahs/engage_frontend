@@ -169,6 +169,7 @@ width: 260px;
 .proxy_setting{
     display: flex;
     flex-direction: row;
+    color: #ffffff;
     gap: 30px;
     align-items: center;
 }

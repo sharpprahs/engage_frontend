@@ -43,6 +43,7 @@
 .settings_panel_element_time_interval input{
     background-color: #161719;
     border-radius: 25px;
+    color: #ffffff;
     padding: 15px 10px 15px 30px;
     width: 35px;
 }

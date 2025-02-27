@@ -39,7 +39,7 @@
 			<a href="/proxies" class:active={page.url.pathname === '/proxies'}>прокси</a>
 		</li>
 		<li>
-			<a href="/users" class:active={page.url.pathname === '/users'}>пользователи</a>
+			<a href="/users" class:active={page.url.pathname === '/users'}>аккаунты</a>
 		</li>
 		<li>
 			<a href="/settings" class:active={page.url.pathname === '/settings'}>настройки</a>

@@ -57,7 +57,7 @@ function handleSenderChange(value: string) {
 	<!-- ✅ Селект отправителей -->
 	<SelectCard
 		title="Отправители"
-		label="База аккаунтов"
+		label="Аккаунты"
 		options={data.senderAccounts_dialogue}
 		selectedValue={$selectedSenderValue}
 		onChange={handleSenderChange}

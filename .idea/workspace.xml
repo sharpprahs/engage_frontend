@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/RecipientItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/RecipientItem.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/WelcomeMessagePopup.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/WelcomeMessagePopup.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/styles/sends_interval_popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/styles/sends_interval_popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dialogues/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/mailings/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/proxies/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/proxies/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/proxies/proxies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/proxies/proxies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/settings/settings.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/users/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/users/users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users/users.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/add_custom_field.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/add_custom_field.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +184,7 @@
       <workItem from="1740501708286" duration="22255000" />
       <workItem from="1740536128325" duration="19431000" />
       <workItem from="1740606282518" duration="25513000" />
+      <workItem from="1740650465008" duration="2060000" />
     </task>
     <servers />
   </component>

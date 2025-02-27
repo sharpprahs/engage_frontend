@@ -100,7 +100,7 @@
 <section class="choice_senders_to_download_proxies">
 	<SelectCard
 		title="Отправители"
-		label="База аккаунтов"
+		label="Аккаунты"
 		options={data.senderAccounts_dialogue}
 		selectedValue={$selectedSenderValue}
 		onChange={handleSenderChange}

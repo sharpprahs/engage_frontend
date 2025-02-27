@@ -61,6 +61,7 @@ background: var(--background_card);
     background-color: var(--background_inputs);
     border-radius: 25px;
     padding: 15px 10px 15px 30px;
+    color: #ffffff;
     width: 35px;
 }
 .settings_panel_element span{
