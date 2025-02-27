@@ -258,6 +258,7 @@
 }
 .users_list input{
     background-color: transparent;
+    color: #ffffff;
     /*font-size: 18px to 16px;*/
     font-size: clamp(1rem, 0.9599rem + 0.1887vw, 1.125rem);
 }
@@ -321,9 +322,11 @@
 }
 .sender_setting input{
     width: 150px;
+    color: #ffffff;
 }
 .password_sender input{
     width: 90px;
+    color: #ffffff;
     transition: 0.1s ease-in-out;
 }
 .password_sender{
