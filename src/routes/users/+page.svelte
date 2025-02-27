@@ -113,6 +113,9 @@
 			recipientName: 'Виктор',
 			recipientSurname: 'Солов',
 			recipientEmail: 'test1232@mail.ru',
+			customFields: [
+				{ name: 'field1', value: 'Значение 1' }
+			]
 		},
 		{
 			id: 2,
@@ -125,6 +128,10 @@
 			recipientName: 'Виктор',
 			recipientSurname: 'Солов',
 			recipientEmail: 'test1232@mail.ru',
+			customFields: [
+				{ name: 'field1', value: 'Значение 1' },
+				{ name: 'field2', value: 'Значение 2' }
+			]
 		}
 	];
 
@@ -301,6 +308,7 @@
 					recipientName={recipient.recipientName}
 					recipientSurname={recipient.recipientSurname}
 					recipientEmail={recipient.recipientEmail}
+					customFields={recipient.customFields ?? []}
 				/>
 			{/each}
 		</ul>

@@ -20,7 +20,7 @@
 	}
 
 	const themes = writable<Theme[]>([
-		{ id: 1, text: 'Поворот не туда' },
+		{ id: 1, text: 'Тема 1' },
 		{ id: 2, text: 'Ещё одна тема' },
 	]);
 

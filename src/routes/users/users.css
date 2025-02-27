@@ -267,8 +267,31 @@
     align-items: center;
     text-align: center;
     gap: 15px;
+    width: 790px;
+    overflow-x: auto;
     font-size: 22px;
     font-weight: 500;
+}
+/* Уменьшаем ширину скролла */
+.named_sender::-webkit-scrollbar {
+    width: 15px; /* Для вертикального скролла */
+    height: 15px; /* Для горизонтального скролла */
+}
+
+/* Цвет и закругление ползунка */
+.named_sender::-webkit-scrollbar-thumb {
+    background: #3a3a3a; /* Цвет полоски */
+    border-radius: 55px;
+}
+
+/* Цвет фона скроллбара */
+.named_sender::-webkit-scrollbar-track {
+    background: rgba(16, 16, 16, 0.28); /* Цвет фона */
+}
+
+/* При наведении делаем ползунок темнее */
+.named_sender::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .names_item{
@@ -335,6 +358,9 @@
 .saved_changes{
     background-image: url('/saved.svg');
 }
+.add_custom_field{
+    background-image: url('/add_custom_field.svg');
+}
 .paused{
     background-image: url('/pause.svg');
 }
@@ -344,4 +370,18 @@
 .pagination_users{
         margin-top: 35px;
         margin-left: 30px;
+}
+.custom_content{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 25px;
+}
+.custom_name{
+    color: #4A90E2;
+    font-size: 12px !important;
+}
+.custom_value{
+    font-size: 16px !important;
+    color: #bdf0ff;
 }
