@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7e1e9a-8542-48a6-9522-8be722a8be91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/proxies/proxies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/proxies/proxies.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <recent name="C:\Users\overflow\Desktop\frontend_engage_mailer\src\lib\styles" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.preview" />
       </list>
     </recent_temporary>
@@ -178,7 +177,8 @@
       <workItem from="1740536128325" duration="19431000" />
       <workItem from="1740606282518" duration="25513000" />
       <workItem from="1740650465008" duration="5086000" />
-      <workItem from="1740695329118" duration="1152000" />
+      <workItem from="1740695329118" duration="2223000" />
+      <workItem from="1740761888379" duration="46000" />
     </task>
     <servers />
   </component>
